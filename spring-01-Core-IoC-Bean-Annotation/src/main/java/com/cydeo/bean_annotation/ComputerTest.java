@@ -43,10 +43,15 @@ public class ComputerTest {
 //        PC myPc2 = new PC(theCase,theMonitor,theMotherboard);
 
         System.out.println("************Multiple Objects******************");
+        // two ways to fix for multiple object
 
         Monitor theMonitor2 = container.getBean("monitorSony", Monitor.class);  //DEFAULT BEAN NAME
         Monitor theMonitor3 = container.getBean("sony", Monitor.class);  //CUSTOM BEAN NAME
         Monitor theMonitor4 = container.getBean( Monitor.class);  //@Primary
+
+        theMonitor2.toString();
+
+
 
 
 
