@@ -9,8 +9,8 @@ public class ComputerTest {
 
         ApplicationContext container =new AnnotationConfigApplicationContext(PcConfig.class);
 
-        PC myPc = container.getBean(PC.class);
-
+        PC myPc = container.getBean(PC.class); // I need PC object from the container
+         // How you can add PC bean in the container
         System.out.println(myPc.getTheCase().getDimensions().getDepth());
     }
 }

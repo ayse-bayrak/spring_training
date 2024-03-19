@@ -11,7 +11,7 @@ public abstract class Case {
     private String powerSupply;
 
     @Autowired
-    private Dimensions dimensions;  // field using with Autowired
+    private Dimensions dimensions;  //field injections with Autowired
 
     public Case(String model, String manufacturer, String powerSupply) {
         this.model = model;
