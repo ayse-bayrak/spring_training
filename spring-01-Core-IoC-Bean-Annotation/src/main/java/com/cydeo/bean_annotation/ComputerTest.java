@@ -13,11 +13,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class ComputerTest {
     public static void main(String[] args) {
 
-
         System.out.println("Creating Container");
 
         //Creating container by using Application Context
         ApplicationContext container = new AnnotationConfigApplicationContext(ComputerConfig.class, RandomConfig.class);
+        // whatever configuration you want to edit, you can just say comma and put other one and comma put other one.
 
         //Creating container by using BeanFactory
         BeanFactory context = new AnnotationConfigApplicationContext();
