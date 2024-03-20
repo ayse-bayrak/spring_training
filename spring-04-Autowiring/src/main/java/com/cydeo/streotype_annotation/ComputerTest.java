@@ -11,6 +11,8 @@ public class ComputerTest {
 
         PC myPc = container.getBean(PC.class); // I need PC object from the container
          // How you can add PC bean in the container
-        System.out.println(myPc.getTheCase().getDimensions().getDepth());
+        myPc.powerUp();
+        //System.out.println(myPc.getTheCase().getDimensions().getDepth());
+
     }
 }

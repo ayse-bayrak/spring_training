@@ -12,7 +12,8 @@ public class PcConfig {
     @Bean
     public Dimensions dimensions(){
         return new Dimensions(50,10,10);
-    } // you just create the bean Dimensions in the container, and now this bean in the contaainer
+    } // you just create the bean Dimensions in the container,
+    // and now this bean in the container
     // and Spring is provided by itself..
     // this is called wiring
 
@@ -21,4 +22,15 @@ public class PcConfig {
         return new DellCase("220B","Dell","240",dimensions);
         // I have in the container and I have a Dimensions bean, let me provide.. it's wiring
     }
+
+    //you are creating new Object and one of the property of the Case object
+    // is Dimensions, where you are going to bring this Dimension?
+    // If you do not define inside the method or Constructor
+    //you are going to bring from the outside. How you can bring something to your methodfrom the outside?
+    // with the parameter
+    //Spring is gonna find that Object in the container ant it's gonna wire for your automatically
+    //whenever ypu parameter, then wiring is completed.
+    //this is called direct wiring
+    // and also there is Dependency Injections,
+    // because Spring container "injects" Dimensions Object into Case objects or dependencies
 }
