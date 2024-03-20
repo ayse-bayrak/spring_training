@@ -13,6 +13,6 @@ public class EmailCommentNotificationProxy implements CommentNotificationProxy{
     //second question? if this class somewhere else basically other class requires this class
     // yes whenever you say CommentNotificationProxy one of the implementation this interface needs to be CommentService
     public void sendComment(Comment comment) {
-        System.out.println("Sending notofication for comment:" + comment.getText() );
+        System.out.println("Sending notification for comment: " + comment.getText() );
     }
 }

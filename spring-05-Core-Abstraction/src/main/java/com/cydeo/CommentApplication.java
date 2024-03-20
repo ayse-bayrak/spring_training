@@ -8,7 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class CommentApplication {
     public static void main(String[] args) {
-
+// we use this class only test, there is not this class in the real application
 
         Comment comment = new Comment();
         comment.setAuthor("Jhonson");
