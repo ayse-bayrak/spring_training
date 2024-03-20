@@ -5,11 +5,20 @@ import com.cydeo.proxy.CommentNotificationProxy;
 import com.cydeo.proxy.EmailCommentNotificationProxy;
 import com.cydeo.repository.CommentRepository;
 import com.cydeo.repository.DBCommentRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CommentService {  // always only you need to put interfaces
 
-    private CommentRepository commentRepository;
-    private CommentNotificationProxy commentNotificationProxy;
+    private final CommentRepository commentRepository;// being final it is a good practice, because we might forget Constructor
+    // and then can not be injection, it is bad especially for big APP
+    // it is a good practice because it remind me Constructor or if add new field, it reminds me add new field to Constructor
+    private final CommentNotificationProxy commentNotificationProxy;
+
+    public CommentService(CommentRepository commentRepository, CommentNotificationProxy commentNotificationProxy) {
+        this.commentRepository = commentRepository;
+        this.commentNotificationProxy = commentNotificationProxy;
+    }
 
     public void publishComment(Comment comment) {
         commentRepository.storeComment(comment);
