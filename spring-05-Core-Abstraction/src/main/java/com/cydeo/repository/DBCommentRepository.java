@@ -12,3 +12,7 @@ public class DBCommentRepository implements CommentRepository{
         System.out.println("Storing comment: "+ comment.getText());
     }
 }
+// first question? is has a ? there is not has a relationship
+// second question? if this class somewhere else basically other class requires this class
+// yes whenever you say CommentRepository one of the implementation this interface needs to be CommentService
+// then we put @Component
