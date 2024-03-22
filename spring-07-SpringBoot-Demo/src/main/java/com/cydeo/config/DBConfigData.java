@@ -12,7 +12,7 @@ import java.util.List;
 public class DBConfigData {
 
 
-    private String username;
+    private String username; //db.username
     private String password;
     private List<String> type;
 }
