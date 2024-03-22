@@ -8,7 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class CommentApplication {
     public static void main(String[] args) {
-// we use this class only test, there is not this class in the real application
+// we use this class only test, there is no this class in the real application
 
         Comment comment = new Comment();
         comment.setAuthor("Jhonson");
@@ -17,6 +17,9 @@ public class CommentApplication {
         CommentService commentService = context.getBean(CommentService.class);
         commentService.publishComment(comment);
 
+        Comment comment1 = new Comment();
+        comment1.setText("Hello");
+        commentService.publishComment(comment1);
     }
 }
 // always put your runner under the main/base package which is Cydeo
