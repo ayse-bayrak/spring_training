@@ -8,7 +8,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PC {
-
+//tightly coupled means one class broken another doesnt work
+    // PC class expecting specific class
+    // how to handle
+    // abstraction ==> loosely couple
     private DellCase theCase;
     private AcerMonitor monitor;
     private AsusMotherboard motherboard;

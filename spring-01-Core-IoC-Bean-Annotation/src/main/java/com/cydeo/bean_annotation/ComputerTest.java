@@ -16,6 +16,7 @@ public class ComputerTest {
         System.out.println("Creating Container");
 
         //Creating container by using Application Context
+        //places, box,
         ApplicationContext container = new AnnotationConfigApplicationContext(ComputerConfig.class, RandomConfig.class);
         // whatever configuration you want to edit, you can just say comma and put other one and comma put other one.
 

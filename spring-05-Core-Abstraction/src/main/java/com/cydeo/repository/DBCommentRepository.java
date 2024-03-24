@@ -4,6 +4,7 @@ import com.cydeo.model.Comment;
 import org.springframework.stereotype.Component;
 // CommentService is requesting one Object belongs to CommentRepository
 //(CommentRepository commentRepository) so needs to be @Component
+//how to delete, update data
 
 @Component
 public class DBCommentRepository implements CommentRepository{

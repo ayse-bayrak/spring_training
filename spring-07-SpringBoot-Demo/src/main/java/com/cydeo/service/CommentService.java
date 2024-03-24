@@ -34,8 +34,10 @@ public class CommentService {  // always only you need to put interfaces
     }
 
     public void publishComment(Comment comment) {
+
         commentRepository.storeComment(comment);
         commentNotificationProxy.sendComment(comment);
+
     }
 
     public void printConfigData(){

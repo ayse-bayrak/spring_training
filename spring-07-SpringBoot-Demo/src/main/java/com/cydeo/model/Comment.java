@@ -1,6 +1,4 @@
 package com.cydeo.model;
-
-
 // Model/Entity whatever that Object is travelling in the Application,
 // it is basic pojo, every pojo has certain fields
 // You only put the corresponding fields, nothing else.

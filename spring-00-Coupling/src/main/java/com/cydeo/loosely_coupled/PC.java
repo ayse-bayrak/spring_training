@@ -7,6 +7,10 @@ import com.cydeo.loosely_coupled.motherboardfactory.Motherboard;
 
 public class PC {
 
+    // I defined what needs to be
+    // it is flexible
+    //Reference is the parent so it easy to manage
+
     private Case theCase;
     private Monitor monitor;
     private Motherboard motherboard;

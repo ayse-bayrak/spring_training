@@ -22,6 +22,7 @@ public class PC {  // new PC(case monitor motherboard) when I put @Component Spr
 
     //Starting with Spring version 4.3, when you only have one constructor in the
     //class, you can omit writing the @Autowired annotation.
+    //also called dependecy injection
 
    //@Autowired ==> injecting the values through the constructor, it did not need to mark Spring version 4.3..
     public PC(Case theCase, Monitor monitor, Motherboard motherboard) {

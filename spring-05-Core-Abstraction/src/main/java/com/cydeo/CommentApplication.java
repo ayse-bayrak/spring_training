@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class CommentApplication {
     public static void main(String[] args) {
 // we use this class only test, there is no this class in the real application
-
+// this is our functionality
         Comment comment = new Comment();
         comment.setAuthor("Jhonson");
         comment.setText("Spring Framework");

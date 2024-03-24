@@ -14,6 +14,9 @@ import org.springframework.context.annotation.Primary;
 @Configuration
 public class ComputerConfig {
 
+    // if you want to manage object, we create a method return that object and put @Bean annotation
+    //
+
     @Bean(name="sony")
     public Monitor monitorSony(){
         return new SonyMonitor("25 inch Beast","Sony",25);

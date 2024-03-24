@@ -6,6 +6,7 @@ package com.cydeo.model;
 // You only put the corresponding fields, nothing else.
 // Usually these Model don't include any method, nothing
 // Just fields..
+// this data come from whoever using the app, by the user
 
 import lombok.Data;
 //Model/Entity Object never get @Component, because no need inject this one
