@@ -11,6 +11,7 @@ public class HomeController {
 // because this class will register in the handler mapping
     // then you need to define your end points in the method,
     // how? by using @RequestMapping
+    //The controller actions are methods associated with specific HTTP requests.
 
     @RequestMapping("/home")  // defined with /home endpoint
     public String getHomePage() {
@@ -29,7 +30,8 @@ public class HomeController {
         return "home.html";
     }
 
-    @RequestMapping({"/apple","/orange"})
+    @RequestMapping({"/apple","/orange"}) //for same page, more than one end points with the this structure
+    //sometimes we are using, beacsue in our application we want to get a certain view with different endpoints.
     public String getHomePage3() {
         return "home.html";
     }
