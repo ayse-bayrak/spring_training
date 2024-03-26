@@ -1,0 +1,27 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--convert to thymeleaf template, this template also extends .html, it is advantage -->
+<!--this file is able to hold data, dynamic data, either you can transfer from your variable-->
+<!--or you can transfer from you database-->
+<!--This filer is able to hold that one.xmlnamesapce th meaning is thymeleaf tag -->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 th:text="${name}"></h1>
+<h1 th:text="${course}"></h1>
+<!--you always put the thymeleaf tag (th) inside the htlm tag-->
+<!-- you need to put attribute name-->
+
+</body>
+</html>
+
+<!--make sure under the template not static, and put student folder and inside welcome.html-->
+<!--make sure -09-MVC-Model application is running-->
+<!--your main runner is -09-Model application, your main runner should be under the base package not inside another packages-->
+<!--because it's not gonna read the beans-->
+<!--when i run the application and localhost:8080/welcome, I reach -->
+<!--Cydeo-->
+<!--MVC-->
