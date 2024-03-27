@@ -57,8 +57,11 @@
 </ul>
 
 <h2>Printing Student's in table</h2>
+<!--You need to look what it is iterating, which tag is iterating, in my case here tr each row
+ you need put that definition, i want to loop my students, because that is collection
+ then what you are trying to print the screen, I want to print the each table data (td) and what is the
+  table data? student.firstname, the other td student.lastname-->
 <table>
-
 <thead>
     <tr>
         <td>First Name</td>
@@ -68,12 +71,14 @@
     </tr>
 </thead>
     <tbody>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.firstName}"></td>
+        <td th:text="${student.lastName}"></td>
+        <td th:text="${student.age}"></td>
+        <td th:text="${student.state}"></td>
+    </tr>
 
     </tbody>
-
-
-
-
 </table>
 
 
