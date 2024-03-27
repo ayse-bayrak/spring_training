@@ -32,6 +32,12 @@ public class StudentController {
         return "student/welcome";
     }
 
+    @RequestMapping("/welcomeFragments") //localhost:8080/student/welcome?id=3
+    public String welcomeFragments(){
+
+        return "student/welcomeForFragments";
+    }
+
 
 //    @RequestMapping("/drop") //localhost:8080/student/drop
 //    public String drop(){

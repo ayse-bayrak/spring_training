@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--fragments-->
+<div th:fragment="main-menu">
+  <a href="https//cydeo.com">Cydeo</a>
+</div>
+
+<!--it means this is reusable based on fragment name-->
+<!--Whenever use this main-menu name, this code is going to be reflected-->
+<!--like reference menu-->
+<!--footer-->
+<p th:fragment="footer-menu">
+  <a href="privacy">Privacy</a>
+  <a href="term and conditions">Terms</a>
+</p>
+
+<!--Whenever use this footer-menu name, this code is going to be presented in that view-->
+
+</body>
+</html>
