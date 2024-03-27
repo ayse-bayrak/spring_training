@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cydeo</title>
+</head>
+<body>
+<!--We are gonna learn each time leaf tag-->
+<!--we are putting our thymleaf tag inside HTML tag, that is advantage of thymeleaf-->
+<!--Display Value of Model-->
+<!--if you want to show any value of the model use -text- tag we need to call model with ${} ==> keep an attribute name-->
+<h2 th:text="${students.get(0).firstName}"></h2>
+<h2 th:text="${students.get(0).lastName}"></h2>
+
+<!--Concatenation-->
+<h2 th:text="${'Hello ' + students.get(0).firstName}"></h2>
+<h2 th:text="${students.get(0).firstName+ ' ' + students.get(0).lastName}"></h2>
+
+<!--Link-->
+<h2>
+<a th:href="@{https://cydeo.com}">Cydeo Page</a>
+</h2>
+
+<h2>
+<a th:href="@{/student/welcome}">Welcome</a>
+</h2>
+
+<!--Adding Parameters in Link-->
+
+<h2>
+    <a th:href="@{/student/welcome1(id=3)}">IDLink</a>
+</h2>
+
+<h2>
+    <a th:href="@{/student/welcome(name=${students.get(0).firstName})}">NameLink</a>
+</h2>
+
+<!--Iteration-->
+<h2>Printing my list</h2>
+<ul>
+    <li th:each="student : ${students}" th:text="${student} ">Apple</li>
+<!--    get one name from the students-->
+<!--for(String name: students) {-->
+<!--
+}  same thing like for loop -->
+
+</ul>
+
+<h2>Printing Student's first name</h2>
+<ul>
+    <li th:each="student : ${students}" th:text="${student.firstName} ">Apple</li>
+</ul>
+
+<h2>Printing Student's last name</h2>
+<ul>
+    <li th:each="student : ${students}" th:text="${student.lastName} ">Apple</li>
+</ul>
+
+<h2>Printing Student's in table</h2>
+<table>
+
+<thead>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>State</td>
+    </tr>
+</thead>
+    <tbody>
+
+    </tbody>
+
+
+
+
+</table>
+
+
+</body>
+</html>
