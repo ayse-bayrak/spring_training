@@ -16,7 +16,6 @@ public class CarController {
         model.addAttribute("make", make);
 
         return "car/car-info";
-
     }
     // localhost:8080/info2    ==> (KIA)
     @RequestMapping("/info2")
@@ -25,7 +24,6 @@ public class CarController {
         model.addAttribute("make", make);
 
         return "car/car-info";
-
     }
     // localhost:8080/info3?make=Honda&year=2015
     // @RequestParam based on the name, it's matching based on the name
@@ -34,11 +32,8 @@ public class CarController {
 
         model.addAttribute("make", make);
         model.addAttribute("year", year);
-
         return "car/car-info";
-
     }
-
     //localhost:8080/info/honda/2015 (honda is changing {} ==> dynamic)
     // @PathVariable based on the position not name, it's matching based on the position
     @RequestMapping("/info/{make}/{year}")
@@ -49,5 +44,22 @@ public class CarController {
         return "car/car-info";
     }
 
-
 }
+
+/*
+notes of Jamal's Short videos
+@RequestParam
+I am getting something from client (here firstName), getting to my java file,
+putting into my container, transferring to HTML again, and display.
+The parameter is not required anymore, it shoul be worked like default value (here TEST)
+
+ @PathVariable
+ Spring understand, yes This is the path variable (so / /), this is something dynamic (so {})
+ at firstName will be replaced by the client input, and I'm gonna take it here, pass it as parameter, we're gonna get it
+ and send it back to the HTML
+ we can not add any optional here
+ we can add more than one parameter
+ I am accepting last name as a parameter, then I' m adding it to the model
+and I am sending back to HTML so that thymeleaf can run and display on the screen
+
+ */
