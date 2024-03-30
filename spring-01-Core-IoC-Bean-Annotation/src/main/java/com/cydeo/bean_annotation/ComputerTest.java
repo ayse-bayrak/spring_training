@@ -14,9 +14,10 @@ public class ComputerTest {
     public static void main(String[] args) {
 
         System.out.println("Creating Container");
-
+        //Container is the place, the box the pull container that spring is creating object and putting inside the container.
         //Creating container by using Application Context
         ApplicationContext container = new AnnotationConfigApplicationContext(ComputerConfig.class, RandomConfig.class);
+        // hey Spring, go this Config class, if we use @Bean annotation, and the look at the Bean over there
         // whatever configuration you want to edit, you can just say comma and put other one and comma put other one.
 
         //Creating container by using BeanFactory
@@ -25,9 +26,11 @@ public class ComputerTest {
         System.out.println("************Retrieving the beans******************");
 
         SonyMonitor sony = container.getBean(SonyMonitor.class);
+        // you define the bean type, if you only have on Bean matching with your Spring, will not get confused and bring it your Bean
         DellCase dell = container.getBean(DellCase.class);
         AsusMotherboard asus = container.getBean(AsusMotherboard.class);
 
+        // why we are getting those, beacuse we're gonna providing this PC object
         PC myPc = new PC(dell,sony,asus);
 
         myPc.powerUp();
