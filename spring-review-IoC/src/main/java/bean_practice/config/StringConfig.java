@@ -5,6 +5,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class StringConfig {
+
+    //when we dont have control, when the class is not ours, like String class
 /*
 if we would like to full manage the beans we use beans annotation,
 if we would like to spring manage the control the beans we use Streortype
