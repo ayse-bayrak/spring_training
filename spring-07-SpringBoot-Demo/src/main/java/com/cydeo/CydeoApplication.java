@@ -25,5 +25,10 @@ public class CydeoApplication {
 		commentService.printConfigData();
 		commentService.printDbConfigData();
 	}
-
+// if you need to use @Bean, you can just use it here in the runner method,
+// you can just create a method here
+	//@Bean
+	//public static.......{
+	//return ...
+	//}
 }

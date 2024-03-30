@@ -10,4 +10,4 @@ import org.springframework.stereotype.Component;
 public class CommentConfig {
 }
 // if there is a Spring in the picture, we need Configuration.
-//Otherwise there is no meaning Bean
+//Otherwise, there is no meaning Bean

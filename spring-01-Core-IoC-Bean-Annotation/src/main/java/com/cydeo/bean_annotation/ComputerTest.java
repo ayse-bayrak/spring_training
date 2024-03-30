@@ -32,6 +32,9 @@ public class ComputerTest {
 
         // why we are getting those, beacuse we're gonna providing this PC object
         PC myPc = new PC(dell,sony,asus);
+        // there is a dependency relations between PC and other classes other objects(Case, Monitor, MotherBoard)
+        //has a relation we can wire those two classes,
+        // basically we can tell Spring, take this object, use it for creating other object, insert it inject it and creating the other object
 
         myPc.powerUp();
 

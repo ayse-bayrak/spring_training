@@ -8,10 +8,15 @@ import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+// we have tree type of implements dependency injections
+//1-constructor injection
+//2-field injection
+//3-setter injection
+
 @Getter
 @Component
 //@AllArgsConstructor // you can use this structure, that time you should delete constructor
-public class PC {  // new PC(case monitor motherboard) when I put @Component Spring is gonna do the injection for us,
+public class PC {  // new PC(case, monitor, motherboard) when I put @Component Spring is gonna do the injection for us,
     //But it does not do injection with the int primitives
     //@Autowired ==> injecting the values through the class fields, it did not need to mark Spring version 4.3..
     private Case theCase;
@@ -20,8 +25,8 @@ public class PC {  // new PC(case monitor motherboard) when I put @Component Spr
     //@Autowired
     private Motherboard motherboard;
 
-    //Starting with Spring version 4.3, when you only have one constructor in the
-    //class, you can omit writing the @Autowired annotation.
+    //Starting with Spring version 4.3, when you only have one constructor in the class,
+    // you can omit writing the @Autowired annotation.
 
    //@Autowired ==> injecting the values through the constructor, it did not need to mark Spring version 4.3..
     public PC(Case theCase, Monitor monitor, Motherboard motherboard) {
