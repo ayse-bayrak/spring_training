@@ -21,7 +21,6 @@ public class MentorController {
         mentorList.add(new Mentor("Tom", "Hanks", 65, Gender.MALE));
         mentorList.add(new Mentor("Ammy", "Bryan", 25, Gender.FEMALE));
 
-
         //Add those objects to the Model
         model.addAttribute("mentors", mentorList);
 
