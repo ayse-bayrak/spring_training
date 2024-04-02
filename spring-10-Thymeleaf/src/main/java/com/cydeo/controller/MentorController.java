@@ -27,14 +27,6 @@ public class MentorController {
     @PostMapping("/confirm")
     public String submitForm(@ModelAttribute("mentor") Mentor mentor){
         // whatever attribute you have in different meethods, you can catch this one with @ModelAttribute
-
-        return "mentor/mentor-confirmation";
+        return "redirect:/mentor/register";
     }
-    @GetMapping("/confirm")
-    public String submitForm2(){
-
-        return "mentor/mentor-confirmation";
-    }
-
-
 }

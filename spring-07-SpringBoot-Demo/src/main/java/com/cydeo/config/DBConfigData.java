@@ -11,7 +11,6 @@ import java.util.List;
 @Data
 public class DBConfigData {
 
-
     private String username; //db.username
     private String password;
     private List<String> type;

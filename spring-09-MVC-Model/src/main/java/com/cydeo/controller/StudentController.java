@@ -48,7 +48,7 @@ public class StudentController {
 // Model is using to carry a data to the view, how ?
     //by using methods, what is method?
     //addAttribute() ==> takes two parameter one of them attribute name
-    //one of them atiribute value, meaning ==> name is holding the cydeo value
-    // basically by using thi name attribute in the view you have access to this cydeo value
+    //one of them attribute value, meaning ==> name is holding the cydeo value
+    // basically by using the name attribute in the view you have access to this cydeo value
 // i can create as much as I want
 }

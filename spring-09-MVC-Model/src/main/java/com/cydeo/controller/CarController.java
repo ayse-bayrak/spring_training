@@ -34,7 +34,7 @@ public class CarController {
         model.addAttribute("year", year);
         return "car/car-info";
     }
-    //localhost:8080/info/honda/2015 (honda is changing {} ==> dynamic)
+    //localhost:8080/info/Honda/2015 (honda is changing {} ==> dynamic)
     // @PathVariable based on the position not name, it's matching based on the position
     @RequestMapping("/info/{make}/{year}")
     public String getCarInfo(@PathVariable String make, @PathVariable int year){
@@ -51,7 +51,7 @@ notes of Jamal's Short videos
 @RequestParam
 I am getting something from client (here firstName), getting to my java file,
 putting into my container, transferring to HTML again, and display.
-The parameter is not required anymore, it shoul be worked like default value (here TEST)
+The parameter is not required anymore, it should be worked like default value (here TEST)
 
  @PathVariable
  Spring understand, yes This is the path variable (so / /), this is something dynamic (so {})

@@ -31,14 +31,14 @@ public class HomeController {
     }
 
     @RequestMapping({"/apple","/orange"}) //for same page, more than one end points with the this structure
-    //sometimes we are using, beacsue in our application we want to get a certain view with different endpoints.
+    //sometimes we are using, because in our application we want to get a same certain view with different endpoints.
     public String getHomePage3() {
         return "home.html";
     }
 
     //http://localhost:8080/home ===> Welcome to Home Page!!!
     //whenever we request /home, Spring is gonna look for all the controller classes,
-    //and it's gonna find the method with describe whis this  endpoint which is /home
+    //and it's gonna find the method with describe this  endpoint which is /home
 
 
 

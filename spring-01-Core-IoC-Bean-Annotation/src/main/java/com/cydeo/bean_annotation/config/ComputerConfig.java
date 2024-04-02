@@ -21,15 +21,15 @@ import org.springframework.context.annotation.Primary;
 public class ComputerConfig {
 
     @Bean(name="sony")  // this annotation is used to label the methods that are returning objects
+    //CUSTOM BEAN NAME
     // so we are in the implementatipn we are responsible for using new keyword one time create object on time,
     // the rest will handled by Spring
     public Monitor monitorSony(){
         return new SonyMonitor("25 inch Beast","Sony",25);
     }
-
+    //DEFAULT BEAN NAME
     @Bean(name="sony2") // giving name to your Bean, custom name
     public Monitor monitorSony2(){
-
         return new SonyMonitor("40 inch Beast","Sony",40);
     }
 
@@ -37,13 +37,12 @@ public class ComputerConfig {
     if you would like to use static always same bean we can use Primary,
     if you would like to adopt the bean in different situation we can use bean Name
      */
-
     @Bean
     @Primary // to make default
     public Monitor monitorAcer(){
         return new AcerMonitor("23 inch Beast","Acer",23);
     }
-
+    //@Primary BEAN
 
     @Bean
     public Case caseDell(){

@@ -9,7 +9,7 @@ public class StudentController {
     public String getStudentInfo(){
         return "student/welcome.html";
         // we need to mention about this folder, welcome.html under the static
-        // but at the sam time inside the student folder so we need to mentioned student folder
+        // but at the same time inside the student folder so we need to mentioned student folder
 
         //http://localhost:8080/student ===> Welcome to Cydeo, Java Dev Students!!
     }
