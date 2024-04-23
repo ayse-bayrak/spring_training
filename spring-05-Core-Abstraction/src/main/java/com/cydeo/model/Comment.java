@@ -14,7 +14,7 @@ import lombok.Data;
 //or provide the information
 //Model/Entity Object never get @Component, because no need inject this one, i don't need to Spring cretae object
 //because this information will be field by user
-// shortly, if you use class to get the information that class will not go to container
+//shortly, if you use class to get the information that class will not go to container
 @Data
 public class Comment {
     private String author;

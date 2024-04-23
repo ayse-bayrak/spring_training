@@ -9,7 +9,7 @@
 <!--    i want to view on the middle-->
 <!--    every form needs to be assigned to one object-->
 <form th:action="@{/mentor/confirm}" method="post" th:object="${mentor}">
-<!--whenever I click button(here register), it is gonna execute that /mentor/confirm endpoint    -->
+<!--whenever I click button (here register), it is going to execute that this action part==> /mentor/confirm endpoint    -->
 
     <label>First Name:</label>
     <input type="text" th:field="*{firstName}"><br>
@@ -38,10 +38,7 @@
     <textarea th:field="*{company}"></textarea><br>
 
     <button type="submit">Register</button>
-
-
-
-
+<!--  put submit and go to action part ==> th:action="@{/mentor/confirm}"-->
 </form>
 </div>
 </body>

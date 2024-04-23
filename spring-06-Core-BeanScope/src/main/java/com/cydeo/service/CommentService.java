@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Scope("prototype") ==> it can be written like this
-@Scope(BeanDefinition.SCOPE_PROTOTYPE)
+@Scope("prototype") //==> it can be written like this
+//@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 // if it is SCOPE_PROTOTYPE
 // if it is Singleton Spring always is going to give me the same object from the container
 // if it is Prototype Spring always is going to create one more object from the container

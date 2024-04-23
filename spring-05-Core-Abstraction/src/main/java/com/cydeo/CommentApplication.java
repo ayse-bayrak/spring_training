@@ -26,6 +26,6 @@ public class CommentApplication {
 // what's responsibility?
 //run the publishComment() method, how i need to execute this method?
 // we need to create first object from the CommentService and then .publishComment()
-//this is Java, but it is not good structure, because I am creating so mush tightly coupling structure
+//this is Java, but it is not good structure, because I am creating so much tightly coupling structure
 // we can not handle this, so we use Spring
 //define the bean

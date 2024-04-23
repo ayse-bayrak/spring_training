@@ -24,6 +24,7 @@ public class MentorController {
         //Add those objects to the Model
         model.addAttribute("mentors", mentorList);
 
+
         return "mentor/mentor-list";
     }
 }

@@ -20,7 +20,7 @@ public class PcConfig {
 
     @Bean
     public Case caseDell(Dimensions dimensions){ // wiring automatically happen inside
-        return new DellCase("220B","Dell","240",dimensions);
+        return new DellCase("220B","Dell","240", dimensions);
         // I have in the container and I have a Dimensions bean, let me provide.. it's wiring
     }
 // we need to add parameter

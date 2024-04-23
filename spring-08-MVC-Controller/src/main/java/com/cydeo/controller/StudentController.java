@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class StudentController {
     @RequestMapping("/student")
     public String getStudentInfo(){
-        return "student/welcome.html";
+        return "student/welcome";
         // we need to mention about this folder, welcome.html under the static
         // but at the same time inside the student folder so we need to mentioned student folder
 

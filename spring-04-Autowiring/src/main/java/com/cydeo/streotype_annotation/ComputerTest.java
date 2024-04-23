@@ -1,5 +1,6 @@
 package com.cydeo.streotype_annotation;
 
+import com.cydeo.streotype_annotation.casefactory.DellCase;
 import com.cydeo.streotype_annotation.config.PcConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -12,6 +13,9 @@ public class ComputerTest {
         PC myPc = container.getBean(PC.class);
         // I need PC object from the container
         // How you can add PC bean in the container
+
+        DellCase dellCase = container.getBean(DellCase.class);
+        dellCase.pressPowerButton();
 
         myPc.powerUp();
         //System.out.println(myPc.getTheCase().getDimensions().getDepth());

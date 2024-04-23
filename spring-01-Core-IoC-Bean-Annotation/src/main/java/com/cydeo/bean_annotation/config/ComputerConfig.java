@@ -22,7 +22,7 @@ public class ComputerConfig {
 
     @Bean(name="sony")  // this annotation is used to label the methods that are returning objects
     //CUSTOM BEAN NAME
-    // so we are in the implementatipn we are responsible for using new keyword one time create object on time,
+    // so we are in the implementation we are responsible for using new keyword one time create object on time,
     // the rest will handled by Spring
     public Monitor monitorSony(){
         return new SonyMonitor("25 inch Beast","Sony",25);

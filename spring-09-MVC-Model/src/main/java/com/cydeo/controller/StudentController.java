@@ -41,6 +41,7 @@ public class StudentController {
 
         return "student/welcome";
     }
+
     // this is pure html right now, this is template thymeleaf.
     //That's why we are putting here only welcome no need .html
 // Model is an interface, ready interface, you can basically use this interface,

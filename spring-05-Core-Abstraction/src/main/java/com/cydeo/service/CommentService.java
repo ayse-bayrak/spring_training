@@ -17,10 +17,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class CommentService {  // always only you need to put interfaces
 //do we have any class has a relationship? yes
-    //why comment service is bean, beacsue when the application is running those objects, service objectsm
+    //why comment service is bean, because when the application is running those objects, service objects
     //repository objects all of them is working. Spring needs those objects and since
     //I leave the management of creation of the object whenever it's required to calling those objects spring is just using
-    //Those actual action objects we can say making functionaltiy up and runnnig, they are going inside the container
+    //Those actual action objects we can say making functionality up and running, they are going inside the container
     //but the rest which is the model package or DTO package data transfer they are not gonna go under Spring
 
     private final CommentRepository commentRepository;// being final it is a good practice, because we might forget Constructor
@@ -28,14 +28,16 @@ public class CommentService {  // always only you need to put interfaces
     // it is a good practice because it reminds me Constructor or if add new field, it reminds me add new field to Constructor
     private final CommentNotificationProxy commentNotificationProxy;
 
+
     public CommentService(CommentRepository commentRepository, @Qualifier("EMAIL") CommentNotificationProxy commentNotificationProxy) {
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;
     }
 
-    public void publishComment(Comment comment) {
+    public void publishComment(Comment comment){
         commentRepository.storeComment(comment);
         commentNotificationProxy.sendComment(comment);
+
     }
 }
 // Service ==> unique stuff, business logic

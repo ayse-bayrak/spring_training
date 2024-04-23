@@ -8,7 +8,7 @@ public class LoginController {
 
     @RequestMapping({"/login","/giris"})
     public String getHomePage4() {
-        return "login.html"; // directly mapping static folder so we do not need to static/login
+        return "login"; // directly mapping static folder so we do not need to static/login
    //<!--.html files are under the static folder-->
     }
 }
