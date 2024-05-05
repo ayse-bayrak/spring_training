@@ -20,5 +20,6 @@ public class Cart {
             joinColumns = @JoinColumn(name="c_id"),
             inverseJoinColumns = @JoinColumn(name="i_id"))
     private List<Item> itemList;
+
     //@JoinTable means, this is created by Spring, it is called join table
 }

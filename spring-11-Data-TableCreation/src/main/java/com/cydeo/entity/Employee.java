@@ -3,7 +3,7 @@ package com.cydeo.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-
+//Table Creation / @Entity
 @Entity // table is created, I am saying Spring--> make table
 public class Employee { // icon says this is table
     @Id// i am saying Spring --> I aam making the this field (ID) as a primary key
@@ -11,9 +11,11 @@ public class Employee { // icon says this is table
     private String name;
 
     //Persistent entity 'Employee' should have primary key
-
+    //An entity represents a table stored in a database
+    // Every instance of an entity represents a row in the table
     // whatever i create in class in the entity package, it's gonna be created as a table in the database
     //and whatever object i create in form any class inside the entity package, is gonna be save as a data in the database in the table
+
 }
 //Hibernate: create table employee (id integer not null, name varchar(255), primary key (id))
 // whenever i put @Entity

@@ -63,3 +63,24 @@ The parameter is not required anymore, it should be worked like default value (h
 and I am sending back to HTML so that thymeleaf can run and display on the screen
 
  */
+/*
+query parameter
+
+https://www.amazon.com/s?k=spring+boot&ref=nav_bb_sb
+
+/s endpoint
+
+?-> end of url
+k=spring+boot
+
+&ref=nav_bb_sb
+
+==tomcat --server responcipility : take request and explain to our app
+takes the user request via http and converts it into source code logic
+
+Handler Mapping is like a log for Controllers
+
+---Open-Closed Principle of SOLID principles.. our code should be open for extension, closed for modifications
+
+---directly implemental objects inside the dependency objects
+ */

@@ -31,7 +31,7 @@ public class Student {
     //@Enumerated(EnumType.ORDINAL) // create integer, it is dafoult one also, f.ex.-> male 0, female 1
     private Gender gender;
 
-    @Transient // ssometimes we don't want to create column from some fields
+    @Transient // sometimes we don't want to create column from some fields
     private String city;
 
 
