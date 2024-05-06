@@ -21,7 +21,7 @@ public class PaymentDetail {
     @Column(columnDefinition = "DATE")
     private LocalDate payoutDate;
 
-    @OneToOne(mappedBy = "paymentDetail")
+    @OneToOne(mappedBy = "paymentDetail") //"paymentDetail" is in the Payment class, if we want to uni-directional, it is not necessary mapped by part
     private Payment payment;
 
     //when i use the mappedBy, I am telling the Spring Boot, do not create any foreign key inside the PaymentDetail table

@@ -19,6 +19,7 @@ public class Payment {
 
     @Column(columnDefinition = "DATE")
     private LocalDate createdDate;
+
     private BigDecimal amount;
 
     @Enumerated(EnumType.STRING)
@@ -28,9 +29,6 @@ public class Payment {
     //@JoinColumn(name = "ayse") // column name could be changed with this annotation, but common usage is to be used as default column name payment_detail_id
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})// you can mention one by one
     private PaymentDetail paymentDetail;
-
-    // I don't need to provide the payment detail by myself. This information is going to come through the joins from the table by SpringBoot.
-    // That's why i am not adding to Constructor.
 
     //Spring boot is gonna create the relationship between two tables which is payment and paymentDetail
     //but SpringBoot does not know what kind of relationship these two table has
@@ -55,6 +53,9 @@ public class Payment {
 
     @ManyToOne
     private Customer customer;
+
+    // I don't need to provide the payment detail by myself. This information is going to come through the joins from the table by SpringBoot.
+    // That's why i am not adding to allArgConstructor.
     public Payment(LocalDate createdDate, BigDecimal amount, Status status) {
         this.createdDate = createdDate;
         this.amount = amount;

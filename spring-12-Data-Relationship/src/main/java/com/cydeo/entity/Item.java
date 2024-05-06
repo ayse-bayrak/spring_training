@@ -19,7 +19,7 @@ public class Item {
     private String name;
     private String code;
 
-    @ManyToMany(mappedBy = "itemList") // with mapped drop table we don't need to
+    @ManyToMany(mappedBy = "itemList") // with mappedBy drops table we don't need to
     private List<Cart> carts;
 
     public Item(String name, String code) {

@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 //Table Creation / @Entity
 @Entity // table is created, I am saying Spring--> make table
 public class Employee { // icon says this is table
-    @Id// i am saying Spring --> I aam making the this field (ID) as a primary key
+    @Id// i am saying Spring --> I am making the this field (ID) as a primary key
     private int id;
     private String name;
 
@@ -25,4 +25,4 @@ public class Employee { // icon says this is table
 //those are basically belongs to database
 //firstName converts first_name
 //when I put as a camelCase, it is gonna be created with underscore
-//That is the naming convention, hibernate is created in the behind the sceene
+//That is the naming convention, hibernate is created in the behind the scene

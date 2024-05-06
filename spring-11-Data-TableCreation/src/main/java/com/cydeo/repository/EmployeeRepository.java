@@ -5,8 +5,7 @@ import com.cydeo.entity.Employee2;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmployeeRepository extends JpaRepository<Employee2, Integer> {
-//Employee2--> Class of the entity that
-// needs to be created, read, updated, deleted in a database
+//Employee2--> Class of the entity that needs to be created, read, updated, deleted in a database
 //Integer-->Type of the field of entity
 
 }

@@ -22,13 +22,15 @@ public class Student {
 
     @Column(columnDefinition= "DATE")
     private LocalDate birthDate;
+
     @Column(columnDefinition= "TIME")
     private LocalDate birthTime;
+
     @Column(columnDefinition= "TIMESTAMP")
     private LocalDate birthDateTime;
 
     @Enumerated(EnumType.STRING) // we can assign as String
-    //@Enumerated(EnumType.ORDINAL) // create integer, it is dafoult one also, f.ex.-> male 0, female 1
+    //@Enumerated(EnumType.ORDINAL) // create integer, it is default one also, f.ex.-> male 0, female 1
     private Gender gender;
 
     @Transient // sometimes we don't want to create column from some fields

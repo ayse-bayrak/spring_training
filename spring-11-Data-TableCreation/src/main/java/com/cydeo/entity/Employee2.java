@@ -16,8 +16,10 @@ public class Employee2 extends BaseEntity {
     private String firstName;
     private String lastName;
     private String email;
+
     @Column(columnDefinition = "DATE")
     private LocalDate hireDate;
+
     @Enumerated(EnumType.STRING)
     Gender gender;
     private int salary;

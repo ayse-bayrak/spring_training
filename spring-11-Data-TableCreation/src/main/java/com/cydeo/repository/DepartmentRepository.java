@@ -4,8 +4,7 @@ import com.cydeo.entity.Department;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DepartmentRepository extends JpaRepository<Department, Integer> {
-//Department--> Class of the entity that
-// needs to be created, read, updated, deleted in a database
+//Department--> Class of the entity that needs to be created, read, updated, deleted in a database
 //Integer-->Type of the field of entity
 }
     /*
