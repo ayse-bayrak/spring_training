@@ -15,4 +15,6 @@ public class Department {
     @Id
     private String department;
     private String division;
+
+   // @mapped by
 }
