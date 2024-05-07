@@ -30,6 +30,10 @@ public class QueryDemo implements CommandLineRunner {
 
         System.out.println("findByDepartment:" + departmentRepository.findByDepartment("Furniture"));
         System.out.println("findTopByDivision:" + departmentRepository.findTopByDivision("Health"));
+        System.out.println("findByDivisionEndsWith:" + departmentRepository.findByDivisionEndsWith("ics"));
+        System.out.println("findDistinctTop3ByByDivision:" + departmentRepository.findDistinctTop3ByDivision("Health"));
+        // all this stuff is why? they are giving all this kind of mechanism because they don't want to take developers with this extra verbos code writing,
+        // that kind of things. They want to pay attention business logic, they don't want to waste developers time with the writing queries
 
 
 
