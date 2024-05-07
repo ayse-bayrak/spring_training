@@ -14,7 +14,6 @@ import java.math.BigDecimal;
 public class Location extends BaseEntity{
 
     @NotBlank
-    @Size(max=12, min=2)
     private String name;
 
     private BigDecimal latitude;
