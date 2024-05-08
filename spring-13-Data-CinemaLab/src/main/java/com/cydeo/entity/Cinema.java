@@ -15,6 +15,6 @@ public class Cinema extends BaseEntity{
     private String sponsoredName;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)// @ManyToOne and @OneToOne are EAGER by default, so you can change those one LAZY
     private Location location;
 }

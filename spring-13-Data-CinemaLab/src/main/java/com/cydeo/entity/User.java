@@ -15,8 +15,6 @@ public class User extends BaseEntity{
     @Email
     private String email;
 
-
-
     @NotBlank
     //@Pattern(regexp = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{4,}")
     private String password;

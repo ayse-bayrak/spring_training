@@ -22,11 +22,12 @@ public class Employee extends BaseEntity {
     private Integer salary;
 
     @ManyToOne
-    @JoinColumn(name="department") // we need change table name because Spring boot is created department_id by default, but in our data.sql there is department field in the employee table
+    @JoinColumn(name="department") // we need change table name because Spring boot is created department_id by default,
+    // but in our data.sql there is department field in the employee table, it is a good different case example
     private Department department;
 
     @ManyToOne
-    @JoinColumn(name="region_id")
+    @JoinColumn(name="region_id") // we don't need to put region_id but it is better to write like this because for examle Jpa hibrenate is chnage and it can be different rule for naming
     private Region region;
 
 }
