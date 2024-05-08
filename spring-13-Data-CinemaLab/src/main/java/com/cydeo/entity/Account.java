@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Account extends BaseEntity{
 
-
     private String address;
     private int age;
 
