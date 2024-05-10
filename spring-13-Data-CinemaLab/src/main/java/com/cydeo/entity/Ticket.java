@@ -39,8 +39,6 @@ public class Ticket extends BaseEntity{
                 "dateTime=" + dateTime +
                 ", seatNumber=" + seatNumber +
                 ", rowNumber=" + rowNumber +
-                ", movieCinema=" + movieCinema +
-                ", userAccount=" + userAccount +
                 '}';
     }
 }
