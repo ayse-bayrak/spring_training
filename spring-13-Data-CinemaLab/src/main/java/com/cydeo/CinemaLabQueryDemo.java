@@ -62,7 +62,7 @@ public class CinemaLabQueryDemo implements CommandLineRunner {
 //        System.out.println(movieCinemaRepository.countMovieCinemaWithId(1L));
 //        System.out.println(movieCinemaRepository.findByCinemaLocationName("AMC Empire 25"));
         System.out.println("=========================MovieRepository=========================");
-
+        System.out.println(movieRepository.findByName("Tenet"));
 
 
 
