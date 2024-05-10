@@ -26,7 +26,6 @@ public class Cinema extends BaseEntity{
         return "Cinema{" +
                 "name='" + name + '\'' +
                 ", sponsoredName='" + sponsoredName + '\'' +
-                ", location=" + location +
                 '}';
     }
 }

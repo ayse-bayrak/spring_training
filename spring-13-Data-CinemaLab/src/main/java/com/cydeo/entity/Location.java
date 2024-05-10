@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class Location extends BaseEntity{
 
-    @NotBlank
+   // @NotBlank
     private String name;
 
     private BigDecimal latitude;
@@ -31,8 +31,6 @@ public class Location extends BaseEntity{
     public String toString() {
         return "Location{" +
                 "name='" + name + '\'' +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
                 ", country='" + country + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +

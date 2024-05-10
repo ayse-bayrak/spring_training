@@ -19,7 +19,7 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
     //Write a derived query to list all accounts with age lower than or equal to a specific value
     List<Account> findByAgeLessThanEqual(int age);
     //Write a derived query to list all accounts with a specific role
-    List<Account> findByRole(String role);
+    List<Account> findByRole(UserRole role);
     //Write a derived query to list all accounts between a range of ages
     List<Account>findByAgeBetween(int age1, int age2);
     //Write a derived query to list all accounts where the beginning of the address contains the keyword

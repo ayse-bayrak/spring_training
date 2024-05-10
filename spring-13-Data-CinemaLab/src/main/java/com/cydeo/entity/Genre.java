@@ -24,7 +24,6 @@ public class Genre extends BaseEntity{
     public String toString() {
         return "Genre{" +
                 "name='" + name + '\'' +
-                ", category=" + category +
                 '}';
     }
 }

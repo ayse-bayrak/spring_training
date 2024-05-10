@@ -53,7 +53,6 @@ public class Movie extends BaseEntity{
                 ", releaseDate=" + releaseDate +
                 ", duration=" + duration +
                 ", summary='" + summary + '\'' +
-                ", genreList=" + genreList +
                 '}';
     }
 

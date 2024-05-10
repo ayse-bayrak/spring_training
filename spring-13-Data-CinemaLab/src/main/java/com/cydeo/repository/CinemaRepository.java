@@ -26,16 +26,15 @@ public interface CinemaRepository extends JpaRepository<Cinema, Long> {
     List<Cinema> readCinemaNameWithId(Long id);
     // ------------------- Native QUERIES ------------------- //
     //Write a native query to read all cinemas by location country
-    @Query(value = "c.name, c.sponsored_name, c.location_id from cinema c join location l\n" +
-            "    on c.location_id=l.id where l.name like ?1", nativeQuery = true)
+    @Query(value = "select c.* from cinema c join location l on c.location_id=l.id where l.country =?1", nativeQuery = true)
     List<Cinema> readCinemaByLocationCountry(String country);
     //Write a native query to read all cinemas by name or sponsored name contains a specific pattern
-    @Query(value = "SELECT * from cinema c where c.name=?1 or c.sponsored_name=?2", nativeQuery = true)
-    List<Cinema> readByNameOrSponsoredNameWithSpecificPattern(String name, String country, String pattern);
+    @Query(value = "SELECT * from cinema c where c.name like %?1% or c.sponsored_name like %?2%", nativeQuery = true)
+    List<Cinema> readByNameOrSponsoredNameWithSpecificPattern(String namePattern, String countryPattern);
     //Write a native query to sort all cinemas by name
     @Query(value = "SELECT * from cinema c order by c.name", nativeQuery = true)
-    List<Cinema> sortCinemaByName();
+    List<Cinema> sortCinemaOrderByName();
     //Write a native query to distinct all cinemas by sponsored name
-    @Query(value = "SELECT distinct sponsored_name from cinema c", nativeQuery = true)
+    @Query(value = "SELECT distinct sponsored_name from cinema ", nativeQuery = true)
     List<String> distinctCinemaByName();
 }
