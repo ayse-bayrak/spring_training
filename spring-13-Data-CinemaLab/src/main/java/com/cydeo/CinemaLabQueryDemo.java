@@ -26,9 +26,9 @@ public class CinemaLabQueryDemo implements CommandLineRunner {
     }
     @Override
     public void run(String... args) throws Exception {
-    System.out.println(accountRepository.findByCountryOrState("United States", "New York"));
-    System.out.println(accountRepository.findByAgeLessThanEqual(40));
-    System.out.println(accountRepository.findByRole("ADMIN"));
-    System.out.println(accountRepository.findByAgeBetween(15, 50));
+      System.out.println(accountRepository.findByCountryOrState("United States", "Kentucky"));
+//    System.out.println(accountRepository.findByAgeLessThanEqual(40));
+//    System.out.println(accountRepository.findByRole("ADMIN"));
+//    System.out.println(accountRepository.findByAgeBetween(15, 50));
     }
 }
