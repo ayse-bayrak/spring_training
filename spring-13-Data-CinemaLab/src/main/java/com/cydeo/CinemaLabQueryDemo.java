@@ -40,6 +40,7 @@ public class CinemaLabQueryDemo implements CommandLineRunner {
         System.out.println(accountRepository.findByAgeLessThanEqual(40));
         System.out.println(accountRepository.findByRole(UserRole.USER));
         System.out.println(accountRepository.findByAgeBetween(15, 50));
+        System.out.println(accountRepository.findByAddressStartingWith("Lo"));
 
         System.out.println("=======================CinemaRepository=======================");
         System.out.println(cinemaRepository.getByName("Hall 1 - EMPIRE"));

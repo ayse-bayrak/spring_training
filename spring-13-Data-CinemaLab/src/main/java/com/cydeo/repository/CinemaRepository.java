@@ -7,15 +7,16 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface CinemaRepository extends JpaRepository<Cinema, Long> {
 
     // ------------------- DERIVED QUERIES ------------------- //
     //Write a derived query to get cinema with a specific name
-    List<Cinema> getByName(String name);
+    Optional<Cinema> getByName(String name);
     //Write a derived query to read sorted the top 3 cinemas that contains a specific sponsored name
-    List<Cinema> getTop3BySponsoredNameContains(String specificSponsoredName);
+    List<Cinema> getTop3BySponsoredNameContainsOOrderBySponsoredName(String specificSponsoredName);
     //Write a derived query to list all cinemas in a specific country
     List<Cinema> getByLocation_Country(String country);
     //Write a derived query to list all cinemas with a specific name or sponsored name
