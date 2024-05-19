@@ -4,7 +4,6 @@ import com.cydeo.enums.MovieState;
 import com.cydeo.enums.MovieType;
 import com.cydeo.enums.UserRole;
 import com.cydeo.repository.*;
-import org.hibernate.tool.schema.internal.exec.ScriptTargetOutputToFile;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -44,7 +43,7 @@ public class CinemaLabQueryDemo implements CommandLineRunner {
 
         System.out.println("=======================CinemaRepository=======================");
         System.out.println(cinemaRepository.getByName("Hall 1 - EMPIRE"));
-        System.out.println(cinemaRepository.getTop3BySponsoredNameContains("Kodak"));
+//        System.out.println(cinemaRepository.getTop3BySponsoredNameContains("Kodak"));
         System.out.println(cinemaRepository.getByLocation_Country("United States"));
         System.out.println(cinemaRepository.getByNameOrSponsoredName("Hall 2 - EMPIRE", "Kodak"));
         System.out.println(cinemaRepository.readCinemaNameWithId(5L));
@@ -83,7 +82,7 @@ public class CinemaLabQueryDemo implements CommandLineRunner {
         System.out.println(movieRepository.most5ExpensiveMovies());
 
         System.out.println("=========================TicketRepository=========================");
-        System.out.println(ticketRepository.countAllBy());
+//        System.out.println(ticketRepository.countAllByUserAccountId());
         System.out.println(ticketRepository.findByUserAccountEmail("josie_story@email.com"));
         System.out.println(ticketRepository.countByMovieCinemaMovieName("Tenet"));
         System.out.println(ticketRepository.findByDateTimeBetween(LocalDate.of(2020, 12, 06), LocalDate.of(2020, 12, 07)));

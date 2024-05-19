@@ -14,7 +14,7 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
     // ------------------- DERIVED QUERIES ------------------- //
 
     //Write a derived query to count how many tickets a user bought
-Long countAllBy();
+    Long countAllByUserAccountId(Long userId);
 
     //Write a derived query to list all tickets by specific email
 List<Ticket> findByUserAccountEmail(String email);

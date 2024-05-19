@@ -16,7 +16,7 @@ public interface CinemaRepository extends JpaRepository<Cinema, Long> {
     //Write a derived query to get cinema with a specific name
     Optional<Cinema> getByName(String name);
     //Write a derived query to read sorted the top 3 cinemas that contains a specific sponsored name
-    List<Cinema> getTop3BySponsoredNameContainsOOrderBySponsoredName(String specificSponsoredName);
+    List<Cinema> getTop3BySponsoredNameContainsOrderBySponsoredName(String specificSponsoredName);
     //Write a derived query to list all cinemas in a specific country
     List<Cinema> getByLocation_Country(String country);
     //Write a derived query to list all cinemas with a specific name or sponsored name
