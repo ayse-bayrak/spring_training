@@ -4,8 +4,8 @@ import com.cydeo.entity.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 //@Repository
 public interface CarRepository extends JpaRepository<Car,Long> {
-//Car--> Class of the entity that
-// needs to be created, read, updated, deleted in a database
+
+//Car--> Class of the entity that needs to be created, read, updated, deleted in a database
 //Long-->Type of the field of entity
 
 }

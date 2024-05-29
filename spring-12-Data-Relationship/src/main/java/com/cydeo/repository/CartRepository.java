@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface    CartRepository extends JpaRepository<Cart, Long> {
     // whatever inside this method imlemantation has to be SQL
 // findBy(Long id);// hey DB, i need student with id 2
-    //we don't see that one impl ementation is ready by Spring
+    //we don't see that one, implementation is ready by Spring
 
 }
