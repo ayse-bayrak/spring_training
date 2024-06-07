@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public interface CourseRepository extends JpaRepository<Course, Long> {
-// Why we are using JpaRepository? Because it is covers everything CrudRepository and other repository, So why not?
+// Why we are using JpaRepository? Because it is covers everything
+// CrudRepository and other repository, So why not?
 //I am writing all Query type inside repository Why?
 // Because this is where business is happening,
 // You can think Database service implementation

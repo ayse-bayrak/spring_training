@@ -28,7 +28,7 @@ public class QueryDemo implements CommandLineRunner {
         //3-Native Query
 
         //What is Derived Queri: we are writing a method and
-        // then in the behind the scene in the implementation Spring Data iscreating Query for this one and running in the database
+        // then in the behind the scene in the implementation Spring Data is creating Query for this one and running in the database
         //To be able to create the structure drive query , we need to follow a naming convention find-->select, by --> where
 // whenever we retrive data we can do anything, just pass UI exc.
 

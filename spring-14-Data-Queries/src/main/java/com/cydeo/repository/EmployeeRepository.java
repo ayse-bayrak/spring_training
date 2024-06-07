@@ -28,7 +28,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     //3-Native Query
 
     //What is Derived Queri: we are writing a method and
-    // then in the behind the scene in the implementation Spring Data iscreating Query for this one and running in the database
+    // then in the behind the scene in the implementation Spring Data is creating Query for this one and running in the database
     //To be able to create the structure drive query , we need to follow a naming convention find-->select, by --> where
 // whenever we retrive data we can do anything, just pass UI exc.
     // --------------1-DERIVED QUERIES---------------- WE GONNA USE MOST THIS ONE
@@ -93,9 +93,9 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     Integer retrieveEmployeeSalary();
 
     // which queries we use? in the company Totally we are gonna decide based on the situation
-    // probably most the case %90 just we build derive querie and then move on
+    // probably most the case %90 just we build derive queried and then move on
 
-    // email is hardcodded, how we parametirized this one?
+    // email is hardcoded, how we parameterized this one?
     //Positional Parameters
     //Named Parameters
     //Positional Parameters
