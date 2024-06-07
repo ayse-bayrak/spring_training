@@ -30,7 +30,7 @@ public class ComputerTest {
         DellCase dell = container.getBean(DellCase.class);
         AsusMotherboard asus = container.getBean(AsusMotherboard.class);
 
-        // why we are getting those, beacuse we're gonna providing this PC object
+        // why we are getting those, because we're gonna providing this PC object
         PC myPc = new PC(dell,sony,asus);
         // there is a dependency relations between PC and other classes other objects(Case, Monitor, MotherBoard)
         //has a relation we can wire those two classes,
