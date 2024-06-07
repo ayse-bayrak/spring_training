@@ -10,8 +10,9 @@ import org.springframework.stereotype.Component;
 //@AllArgsConstructor
 @Component // since I put @Component, Spring is trying to create an object
 // Spring is gonna do new Dimensions,
-public class Dimensions {  /// new Dimensions(int int int)
-    //dependency injection can not be done on the Primitives. Spring says There is nothing I can inject this one
+public class Dimensions {  // Spring create new Dimensions(int int int)
+    //dependency injection can not be done on the Primitives.
+    //Spring says There is nothing I can inject this one
 
     private int width;
     private int height;
