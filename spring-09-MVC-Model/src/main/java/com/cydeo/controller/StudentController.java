@@ -15,7 +15,7 @@ public class StudentController {
     @RequestMapping ("/welcome")
     public String homePage(Model model){
         // method Model interface
-// I want to execute a method belongs to model interface, that's why pass a parameter
+        // I want to execute a method belongs to model interface, that's why pass a parameter
         model.addAttribute("name", "Cydeo");
         model.addAttribute("course", "MVC");
 
