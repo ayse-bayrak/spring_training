@@ -10,7 +10,9 @@ public abstract class Case {
     private String model;
     private String manufacturer;
     private String powerSupply;
-    private Dimensions dimensions; // Case has a Dimensions, to be able to Case object i need to provide Dimensions object
+    private Dimensions dimensions;
+    // Case has a Dimensions object,
+    // to be able to Case object i need to provide Dimensions object
 
     public Case(String model, String manufacturer, String powerSupply, Dimensions dimensions) {
         this.model = model;

@@ -23,15 +23,15 @@ public class PcConfig {
         return new DellCase("220B","Dell","240", dimensions);
         // I have in the container and I have a Dimensions bean, let me provide.. it's wiring
     }
-// we need to add parameter
+// we need to add Object to method as a parameter
     //you are creating new Object and one of the property of the Case object
     // is Dimensions, where you are going to bring this Dimension?
     // If you do not define inside the method or Constructor
     //you are going to bring from the outside. How you can bring something to your method from the outside?
     // with the parameter
     //Spring is gonna find that Object in the container ant it's gonna wire for your automatically
-    //whenever you parameter, then wiring is completed.
+    //whenever you add parameter, then wiring is completed.
     //this is called direct wiring
     // and also there is Dependency Injections,
-    // because Spring container "injects" Dimensions Object into Case objects or dependencies
+    // because Spring container "injects" Dimensions object into Case objects or dependencies
 }
