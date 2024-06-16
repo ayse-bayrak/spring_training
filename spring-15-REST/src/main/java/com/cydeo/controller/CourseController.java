@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 //Whatever we are putting the controller is DTO does not matter UI or API always return DTO
 @RestController //@Controller + @ResponseBody-- combination is @Controller and @ResponseBody, now view is gone, no more view
-@RequestMapping("/courses")
-public class CourseController {
+@RequestMapping("/courses/api/v1")
+public class CourseController { // first way to cretae endpoint, we don't use thid one but in interview you can explain
+    // They ask you how did you learn the subject, firstly I create very basic by using @RestController
+    // and I took one more step and I start implementing ResponseEntity
 
     private final CourseService courseService;
 
