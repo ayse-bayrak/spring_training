@@ -21,6 +21,9 @@ public class CourseController_ResponseEntity {
 // I am trying to do manipulate something on this API side, I want to pass some headres I want to change some statistic
     //I don't want to put all the time 200.
     // we can pass headers, we can manipulate our status code with ResponseEntity<T> class
+    //it is used to ResponseEntity to specify the
+    //response body, the status and headers on the HTTP response.
+
     @GetMapping
     public ResponseEntity<List<CourseDTO>> getAllCourses(){
     return ResponseEntity
