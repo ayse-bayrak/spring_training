@@ -16,9 +16,9 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/courses/api/v3")
 public class CourseController_ResponseWrapper {
-// this version is final version to create API endpoints, because we need to modify output (vhange status add header etc) and
+// this version is final version to create API endpoints, because we need to modify output (change status add header etc) and
 // we need to customize Json object also, so we use ResponseEntity (ready class which have a lot of method like status, headers, body, ok ...)
-// and ResponseWrapper(custom class) class
+// and we use ResponseWrapper(custom class) class
     private final CourseService courseService;
 
     public CourseController_ResponseWrapper(CourseService courseService) {

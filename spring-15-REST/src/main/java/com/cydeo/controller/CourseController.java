@@ -6,10 +6,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+// you are creating a class, if you annotate this class with the RestController, you are developing an API
+// it is not anymore return view, we are just giving that data return data, data is going to give back to that HTTP method has a Json.
 //Whatever we are putting the controller is DTO does not matter UI or API always return DTO
+// we are creating an API, advantage is taht whoever needs it can take it and use it.
 @RestController //@Controller + @ResponseBody-- combination is @Controller and @ResponseBody, now view is gone, no more view
 @RequestMapping("/courses/api/v1")
-public class CourseController { // first way to cretae endpoint, we don't use thid one but in interview you can explain
+public class CourseController { // first way to create endpoint, we don't use this one but in interview you can explain
     // They ask you how did you learn the subject, firstly I create very basic by using @RestController
     // and I took one more step and I start implementing ResponseEntity
 
@@ -45,7 +48,7 @@ public class CourseController { // first way to cretae endpoint, we don't use th
     @PutMapping("{id}")
     public void updateCourse(@PathVariable("id") long courseId, @RequestBody CourseDTO courseDTO) {
         courseService.updateCourse(courseId, courseDTO);
-    }// we use @RequestBody to capture that object, after we captured the object, it is gono go to database and
+    }// we use @RequestBody to capture that object, after we captured the object, it is gonna go to database and
     // it's gonna replace this object with whatever in the database
 
     @DeleteMapping ("{id}")
