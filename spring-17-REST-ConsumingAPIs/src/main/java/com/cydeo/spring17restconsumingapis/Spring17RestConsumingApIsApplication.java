@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients // whatever in the project, we are consuming API through feintClient in that project we need to put this annotation
 public class Spring17RestConsumingApIsApplication {
 
 	public static void main(String[] args) {
@@ -18,8 +18,8 @@ public class Spring17RestConsumingApIsApplication {
 	public RestTemplate restTemplate(){
 		return new RestTemplate();
 	}
-	// I need to certain methods different classes, i need to inject this one,
-	// but i need to cretae firt @Bean and I can not @Component bevause class is not mine
+	// I need to certain methods different classes, I need to inject this one,
+	// but I need to create first @Bean and I can not @Component because class is not mine
 	// if the class is not yours but if you need bean from this,
 	// we can just create it in the Runner class
 

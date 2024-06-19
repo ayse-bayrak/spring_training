@@ -12,14 +12,15 @@ import java.util.Arrays;
 
 //now, we will learn how to consume API by using Rest Template way..
 //we will implement three methods in the Rest Template
-//1-getForEntity:we are using API that output is gonna be map to DTO and I am gonnaa output whatever my DTO has it
+//1-getForEntity:we are using API that output is gonna be map to DTO and I am gonna output whatever my DTO has it
 //2-getForObject: we don't have dto, it is just taking from the third part API and then whatever Json output result is we see in our endpoint
 //3-exchange : if you want tp pass any header, whenever we want to pass headers
 // just know this part it is enough, syntax we don't need to remember
+
 @RestController
 @RequestMapping("/cydeo")
 public class Consume_RestTemplate {
-    private final String URI = "https://jsonplaceholder.typicode.com/users";
+    private final String URI = "https://jsonplaceholder.typicode.com/users";// there is Json information in here
     private final RestTemplate restTemplate;// I will consume through the RestTemplate,
     // I need to access to methods belongs to this class
 
@@ -45,7 +46,7 @@ public class Consume_RestTemplate {
 
     @GetMapping("/test")
     public ResponseEntity<Object> consumePostFromDummyApi(){
-// we are setting the headers
+        // we are setting the headers
         HttpHeaders headers =new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
         headers.set("app-id","6298ebfecd0551211fce37a6");
