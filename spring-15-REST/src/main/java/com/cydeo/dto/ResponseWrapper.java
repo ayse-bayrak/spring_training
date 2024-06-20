@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 @NoArgsConstructor
 public class ResponseWrapper { // These responseWrapper object what we are gonna see in the API Json
 // this is final way
+    //if we want to show anything customized, we need to create our own customized class, what class? we want to be converted by Jackson to show as a Json in the API output.
     private boolean success;
     private String message;
     private Integer code;

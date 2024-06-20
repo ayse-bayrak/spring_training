@@ -6,10 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-// you are creating a class, if you annotate this class with the RestController, you are developing an API
+// you are creating a class, if you annotate this class with the RestController, you are developing/creating an API
 // it is not anymore return view, we are just giving that data return data, data is going to give back to that HTTP method has a Json.
 //Whatever we are putting the controller is DTO does not matter UI or API always return DTO
-// we are creating an API, advantage is taht whoever needs it can take it and use it.
+// we are creating an API, advantage is that whoever needs it can take it and use it.
 @RestController //@Controller + @ResponseBody-- combination is @Controller and @ResponseBody, now view is gone, no more view
 @RequestMapping("/courses/api/v1")
 public class CourseController { // first way to create endpoint, we don't use this one but in interview you can explain

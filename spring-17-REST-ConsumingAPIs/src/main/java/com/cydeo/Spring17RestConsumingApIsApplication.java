@@ -1,5 +1,6 @@
-package com.cydeo.spring17restconsumingapis;
+package com.cydeo;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -22,5 +23,10 @@ public class Spring17RestConsumingApIsApplication {
 	// but I need to create first @Bean and I can not @Component because class is not mine
 	// if the class is not yours but if you need bean from this,
 	// we can just create it in the Runner class
+
+	@Bean
+	public ModelMapper mapper() {
+		return new ModelMapper();
+	}
 
 }

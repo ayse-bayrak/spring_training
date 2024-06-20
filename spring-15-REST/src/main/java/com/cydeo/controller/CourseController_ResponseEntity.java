@@ -64,5 +64,5 @@ public class CourseController_ResponseEntity {
     public ResponseEntity<Void> updateCourseById(@PathVariable ("id") Long courseId, @RequestBody CourseDTO courseDTO) {
         courseService.deleteCourseById(courseId);
         return ResponseEntity.noContent().build();
-    }
+    }   // if you don't want to show anything is A Json output. You just put void
 }

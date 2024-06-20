@@ -19,6 +19,7 @@ public class CourseController_ResponseWrapper {
 // this version is final version to create API endpoints, because we need to modify output (change status add header etc) and
 // we need to customize Json object also, so we use ResponseEntity (ready class which have a lot of method like status, headers, body, ok ...)
 // and we use ResponseWrapper(custom class) class
+    // we gonna work with this structure all the time
     private final CourseService courseService;
 
     public CourseController_ResponseWrapper(CourseService courseService) {
@@ -29,10 +30,12 @@ public class CourseController_ResponseWrapper {
     public ResponseEntity<ResponseWrapper> getAllCourses() {
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED)
-                .header("Verion", "Cydeo")
+                .header("Version", "Cydeo")
                 .body(new ResponseWrapper("courses succesfully retrieved" , courseService.getCourses()));
         //              new ResponseWrapper(     String message         , Object data) // at the end of courseService.getCourses()) is Object data (List<CourseDTO>)
     }
+
+    //why ResponseWrapper, because that is the class I want to show in the output of the API endpoint
 
     @GetMapping("{id}")
     public ResponseEntity<ResponseWrapper> getCourseById(@PathVariable("id") long courseId) {

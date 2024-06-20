@@ -15,6 +15,18 @@ import reactor.core.publisher.Mono;
 // we are learning how to create our API in a reactive way by using reactive programming of Java which is MONO and FLUX
 //1- Mono: if my endpoints returns one object we say Mono
 //2- Flux: if my endpoints returns more than one object we call Flux
+
+//what is reactive programming
+//Java is providing me this directly progrmaming mono and flux
+//How you can consume reactive APIs?
+//With webClient
+//How you are implementing the webClient?
+//Create instance and then follow structure
+//.get
+//.uri
+//.header
+//.retrieve
+//.bodyToFlux or bodyToMono --> whatever that consuming API is providing
 @RestController
 public class Consume_WebClient {
 
@@ -42,7 +54,7 @@ public class Consume_WebClient {
 //
 //        return Mono.just(movieCinemaService.findById(id));
 //
-//    }
+//    } // regular way, not ResponseEntity
 
     @GetMapping("/mono-movie-cinema/{id}") // localhost:8080
     public ResponseEntity<Mono<MovieCinemaDTO>> readById(@PathVariable("id") Long id){
