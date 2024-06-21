@@ -22,6 +22,9 @@ public class Consume_FeignClient {
     public ResponseEntity<ResponseWrapper> getUsers() {
         return ResponseEntity.ok(new ResponseWrapper("UserList is retrieved", userClient.getUsers() ));
     }
+    // now we apply with header
+//FeignClient needs to dto so we converted all fields to dto by using jsonschemapojo2 and Employee class is ready
+
 
     @GetMapping("/api/v1/employee")
     public ResponseEntity<ResponseWrapper> getEmployee() {

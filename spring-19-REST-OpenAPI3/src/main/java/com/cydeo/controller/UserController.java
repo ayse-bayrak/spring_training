@@ -28,16 +28,16 @@ public class UserController {
 
     @GetMapping("/list")
     @Operation(summary = "Read all users")
-    @ApiResponses(value = {
+    @ApiResponses(value = { // for more than one ApiResponse
             @ApiResponse(responseCode = "200", description = "Successfully retrieved users (OK)",
             content = @Content(mediaType = "application/json")),
-            @ApiResponse(responseCode = "400", description = "Bad Request", content = @Content),
-            @ApiResponse(responseCode = "404", description = "Not Found", content = @Content)
+            @ApiResponse(responseCode = "400", description = "Bad Request", content = @Content),// content, leave it empty
+            @ApiResponse(responseCode = "404", description = "Not Found", content = @Content) // content, leave it empty
     })
     public ResponseEntity<List<UserDTO>> getAllUsers() {
         return ResponseEntity.ok(userService.getUsers());
     }
-
+    //if we do like this our API is going to be able to work with xml and Json
     @PostMapping(consumes = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE},
                 produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
     @Operation(summary = "Create a user")
