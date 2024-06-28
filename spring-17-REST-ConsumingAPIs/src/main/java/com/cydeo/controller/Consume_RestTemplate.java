@@ -1,6 +1,7 @@
 package com.cydeo.controller;
 
 import com.cydeo.dto.User;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import java.util.Arrays;
 @RestController
 @RequestMapping("/cydeo")
 public class Consume_RestTemplate {
+    ObjectMapper objectMapper = new ObjectMapper();
     private final String URI = "https://jsonplaceholder.typicode.com/users";// there is Json information in here
     private final RestTemplate restTemplate;// I will consume through the RestTemplate,
     // I need to access to methods belongs to this class

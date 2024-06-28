@@ -17,18 +17,18 @@ import org.springframework.context.annotation.Primary;
 // we need to create a method, that is returning the objects that you want Spring to add containers
 //and then that method with the @Bean
 
-@Configuration  // this annotation is used to lable the class to make that
+@Configuration  // this annotation is used to label the class to make that
 // class as a Configuration class where we gonna defines our beans
 public class ComputerConfig {
 
     // @Bean--> this annotation is used to label the methods that are returning objects
-    //CUSTOM BEAN NAME
+    // CUSTOM BEAN NAME
     // so we are in the implementation we are responsible for using new keyword one time to create object,
     // the rest will handled by Spring
 
     @Bean(name="sony")
     public Monitor monitorSony(){
-        return new SonyMonitor("25 inch Beast","Sony",25);
+        return new SonyMonitor("25 inch Beast","Sony",25); //since monitor is interface, we create object from implementation class of interface
     }
 
     @Bean(name="sony2") // giving name to your Bean, custom name

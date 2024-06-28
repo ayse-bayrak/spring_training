@@ -31,13 +31,13 @@ public class CourseController_ResponseEntity {
             .status(HttpStatus.ACCEPTED) // I want to change the status code by myself
             .header("Version", "Cydeo.V2")
             .header("Operation", "Get List") // we can pass more than one header, I am modifying output
-            .body(courseService.getCourses());
+            .body(courseService.getCourses()); // since return <List<CourseDTO> we put here List<CourseDTO
     }
     // First way nobody is using first way, everybody is using Response Entity
 
     @GetMapping("{id}")
     public ResponseEntity<CourseDTO> getCourseById(@PathVariable ("id") long courseId) {
-    return ResponseEntity.ok(courseService.getCourseById(courseId));
+    return ResponseEntity.ok(courseService.getCourseById(courseId)); // we don't need to any status or header changing so we use .ok()
     }
 
     @GetMapping("category/{name}")

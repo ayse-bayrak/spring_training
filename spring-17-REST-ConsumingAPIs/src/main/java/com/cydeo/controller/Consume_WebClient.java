@@ -17,11 +17,13 @@ import reactor.core.publisher.Mono;
 //2- Flux: if my endpoints returns more than one object we call Flux
 
 //what is reactive programming
-//Java is providing me this directly progrmaming mono and flux
+//Java is providing me this directly programming mono and flux
+//How you can create reactive APIs?
+//with Mono and Flux java already gives us
 //How you can consume reactive APIs?
 //With webClient
 //How you are implementing the webClient?
-//Create instance and then follow structure
+//Create instance as field (with inject Webclient webclient) and then follow structure
 //.get
 //.uri
 //.header
@@ -43,8 +45,7 @@ public class Consume_WebClient {
 
     @GetMapping("/flux-movie-cinemas") // localhost:8080/flux-movie-cinemas
     public Flux<MovieCinemaDTO> readAllCinemaFlux(){ // flux meaning it is returning more than one
-        //this is works as a reactive way meaning asynsway
-
+        //this is works as a reactive way meaning async way
         return Flux.fromIterable(movieCinemaService.findAll());
 
     }
@@ -82,7 +83,7 @@ public class Consume_WebClient {
     }
 
 //    ---------------------------WEBCLIENT---------------------------
-
+    // for consuming
     @GetMapping("/flux")
     public Flux<MovieCinemaDTO> readWithWebClient(){
 

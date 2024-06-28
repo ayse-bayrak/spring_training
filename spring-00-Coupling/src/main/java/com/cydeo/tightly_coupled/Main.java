@@ -15,11 +15,6 @@ public class Main {
         // PC class is expecting specific class from me, we can not apply directly Sony monitor for example
         thePC.powerUp();
 
-
-
-
-
     }
-
 
 }
