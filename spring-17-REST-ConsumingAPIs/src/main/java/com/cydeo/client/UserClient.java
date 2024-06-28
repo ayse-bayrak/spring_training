@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
+// define an interface where we declare the methods that consume REST endpoints.
 @FeignClient(url= "https://jsonplaceholder.typicode.com", name ="USER-CLIENT") // you think as a definer key and value, this is the user-client is representing this URL
 public interface UserClient { // that is usually naming convention, maybe ProductClient, EmployeeClient
 // like controller structure, @RestController @RequestMapping concatenate for example base url/users
