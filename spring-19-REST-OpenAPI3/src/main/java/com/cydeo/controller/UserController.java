@@ -26,9 +26,10 @@ public class UserController {
         this.userService = userService;
     }
 
+    // How we can modify response and media type modify?  (@ApiResponses)
     @GetMapping("/list")
     @Operation(summary = "Read all users")
-    @ApiResponses(value = { // for more than one ApiResponse
+    @ApiResponses(value = { // for more than one ApiResponse in method level
             @ApiResponse(responseCode = "200", description = "Successfully retrieved users (OK)",
             content = @Content(mediaType = "application/json")),
             @ApiResponse(responseCode = "400", description = "Bad Request", content = @Content),// content, leave it empty
