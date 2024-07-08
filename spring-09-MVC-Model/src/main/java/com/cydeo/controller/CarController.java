@@ -82,5 +82,5 @@ Handler Mapping is like a log for Controllers
 
 ---Open-Closed Principle of SOLID principles.. our code should be open for extension, closed for modifications
 
----directly implemental objects inside the dependency objects
+---directly implementable objects inside the dependency objects
  */

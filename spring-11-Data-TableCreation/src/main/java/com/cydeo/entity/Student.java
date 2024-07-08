@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //id is created automatically by Postgress
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //id is created automatically by Postgres
     private Long id;
 
     @Column(name= "studentFirstName") // change column name, it is not usual usage

@@ -27,4 +27,7 @@ public class Item {
         this.name = name;
         this.code = code;
     }
+
+    //I CAN NOT allArgConstructor because Id is created by postgres
+    //so i need to put custom constructor
 }

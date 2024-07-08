@@ -54,5 +54,5 @@ public interface CourseRepository extends JpaRepository<Course, Long> {
 
     // NAMED PARAMETER
     @Query("SELECT c FROM Course c WHERE c.category= :category AND c.rating >: rating ")
-    List<Course> retrieveAllByCategoryAndRatingGreaterThan(@Param("category") String category, @Param("ratying") int rating);
+    List<Course> retrieveAllByCategoryAndRatingGreaterThan(@Param("category") String category, @Param("rating") int rating);
 }

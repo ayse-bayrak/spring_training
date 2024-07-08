@@ -18,8 +18,8 @@ public class Employee { // icon says this is table
 
 }
 //Hibernate: create table employee (id integer not null, name varchar(255), primary key (id))
-// whenever i put @Entity
-//in the behind the scene this SQL query will execute by Spring
+//whenever i put @Entity
+//in the behind the scene this SQL query will execute by Spring (Hibernate)
 //String convert to varchar
 //Integer convert to int
 //those are basically belongs to database

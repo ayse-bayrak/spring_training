@@ -1,12 +1,13 @@
 package com.cydeo.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
+//@AllArgsConstructor don't put into entity class because id is created by postgres
 @Entity
 @Table(name="paymentDetails")
 @NoArgsConstructor
@@ -22,7 +23,7 @@ public class PaymentDetail {
     private LocalDate payoutDate;
 
     @OneToOne(mappedBy = "paymentDetail") //"paymentDetail" is in the Payment class, if we want to uni-directional, it is not necessary mapped by part
-    private Payment payment;
+    private Payment payment; // don't foreign key `payment` inside the paymentDetails table (mapped)
 
     //when i use the mappedBy, I am telling the Spring Boot, do not create any foreign key inside the PaymentDetail table
     //And I want to give the ownership to payment table, what it means payment table will have the foreign key
@@ -34,4 +35,7 @@ public class PaymentDetail {
         this.commissionAmount = commissionAmount;
         this.payoutDate = payoutDate;
     }
+
+    //I CAN NOT allArgConstructor because Id is created by postgres
+    //so i need to put custom constructor
 }

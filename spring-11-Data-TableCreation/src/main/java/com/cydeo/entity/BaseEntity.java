@@ -5,7 +5,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 
-@MappedSuperclass
+@MappedSuperclass // represents this class is only providing inheritance relationship to other entities
 public class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

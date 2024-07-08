@@ -44,12 +44,12 @@ public class StudentController {
 
     // this is pure html right now, this is template thymeleaf.
     //That's why we are putting here only welcome no need .html
-// Model is an interface, ready interface, you can basically use this interface,
-// by using some methods you can pass your data to the web
-// Model is using to carry a data to the view, how ?
+    // Model is an interface, ready interface, you can basically use this interface,
+    // by using some methods you can pass your data to the web
+    // Model is using to carry a data to the view, how ?
     //by using methods, what is method?
     //addAttribute() ==> takes two parameter one of them attribute name
     //one of them attribute value, meaning ==> name is holding the cydeo value
     // basically by using the name attribute in the view you have access to this cydeo value
-// i can create as much as I want
+    // i can create as much as I want
 }

@@ -13,9 +13,10 @@ import java.util.Arrays;
 // service==> we are putting all our user story, whatever you need to do it in the application
 // for example in here what is responsibility in this application as a developer
 // we need to create publishComment. This one is unique
-//This is user story
-// when we go to compony if we want to understand how application works, we go to Service package
-//we see what they do, Servise package is the place where we are building our user story
+// This is user story
+// when we go to company if we want to understand how application works, we go to Service package
+// we see what they do, Service package is the place where we are building our user story
+
 @Component
 public class CommentService {  // always only you need to put interfaces
 
@@ -37,6 +38,8 @@ public class CommentService {  // always only you need to put interfaces
         commentRepository.storeComment(comment);
         commentNotificationProxy.sendComment(comment);
     }
+
+    //just example configData and dbConfigData
 
     public void printConfigData(){
         System.out.println(appConfigData.getUserName());

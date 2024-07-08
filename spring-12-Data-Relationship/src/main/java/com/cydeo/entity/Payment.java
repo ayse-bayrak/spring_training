@@ -54,6 +54,9 @@ public class Payment {
     @ManyToOne
     private Customer customer;
 
+    @ManyToOne
+    private Cart cart;
+
     // I don't need to provide the payment detail by myself. This information is going to come through the joins from the table by SpringBoot.
     // That's why i am not adding to allArgConstructor.
     public Payment(LocalDate createdDate, BigDecimal amount, Status status) {

@@ -8,7 +8,7 @@ package com.cydeo.model;
 
 
 import lombok.Data;
-//Model side in her, comment from the user, whoever using the application
+//Model side in here, comment from the user, whoever using the application
 //we do not put @Component, because this is not class that spring create
 //Under the model package, the classes that we have we gonna use for get the information
 //or provide the information
