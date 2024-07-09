@@ -71,8 +71,8 @@ public class LoggingAspect {
 //                , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
 //    }
 //   7- after returning
-    @Pointcut("@annotation(org.springframework.web.bind.annotation.GetMapping)")
-    public void afterReturningGetMappingAnnotation() {}
+//    @Pointcut("@annotation(org.springframework.web.bind.annotation.GetMapping)")
+//    public void afterReturningGetMappingAnnotation() {}
 
 //    @AfterReturning(pointcut = "afterReturningGetMappingAnnotation()", returning = "result")
 //    public void afterReturningGetMappingOperation(JoinPoint joinPoint, Object result) {
@@ -88,33 +88,33 @@ public class LoggingAspect {
     // List<CourseDTO> -> List<Object>     --> This is not ok
 //
     // 8 - AfterThrowing
-    @AfterThrowing(pointcut = "afterReturningGetMappingAnnotation()", throwing = "exception")
-    public void afterThrowingGetMappingOperation(JoinPoint joinPoint, RuntimeException exception) {
-        logger.error("After Throwing -> Method: {}, Exception: {}"
-                , joinPoint.getSignature().toShortString(), exception.getMessage());
-    }
+//    @AfterThrowing(pointcut = "afterReturningGetMappingAnnotation()", throwing = "exception")
+//    public void afterThrowingGetMappingOperation(JoinPoint joinPoint, RuntimeException exception) {
+//        logger.error("After Throwing -> Method: {}, Exception: {}"
+//                , joinPoint.getSignature().toShortString(), exception.getMessage());
+//    }
+// 9- Advice @Around
+    @Pointcut("@annotation(com.cydeo.annotation.LoggingAnnotation)")
+    public void loggingAnnotationPC() {}
 
-//    @Pointcut("@annotation(com.cydeo.annotation.LoggingAnnotation)")
-//    public void loggingAnnotationPC() {}
-//
-//    @Around("loggingAnnotationPC()")
-//    public Object anyLoggingAnnotationOperation(ProceedingJoinPoint proceedingJoinPoint) {
-//
-//        logger.info("Before -> Method: {} - Parameter {}"
-//                , proceedingJoinPoint.getSignature().toShortString(), proceedingJoinPoint.getArgs());
-//
-//        Object result = null;
-//
-//        try {
-//            result = proceedingJoinPoint.proceed();
-//        } catch (Throwable throwable) {
-//            throwable.printStackTrace();
-//        }
-//
-//        logger.info("After -> Method: {} - Result: {}"
-//                , proceedingJoinPoint.getSignature().toShortString(), result.toString());
-//        return result;
-// }
+    @Around("loggingAnnotationPC()")
+    public Object anyLoggingAnnotationOperation(ProceedingJoinPoint proceedingJoinPoint) {
+
+        logger.info("Before -> Method: {} - Parameter {}"
+                , proceedingJoinPoint.getSignature().toShortString(), proceedingJoinPoint.getArgs());
+
+        Object result = null;
+// This is how we define which part is going to be before which part is going to be after
+        try {
+            result = proceedingJoinPoint.proceed();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+
+        logger.info("After -> Method: {} - Result: {}"
+                , proceedingJoinPoint.getSignature().toShortString(), result.toString());
+        return result;
+ }
 
 
     }
