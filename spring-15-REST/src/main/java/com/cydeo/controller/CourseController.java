@@ -1,5 +1,19 @@
 package com.cydeo.controller;
 
+/*
+//REST-->architechtual style for building web services
+//it is a standard for creating and consuming data between apps
+//like we used JPA standards for ORM structure..
+//we are using RESTful for our API structure
+//API standard, we mean, like, it's kind of like a set of rules.
+//it's like something abstract. It's some set of principles that we follow
+//to build our Api architecture or a Api structure.
+//the Apis built using all these rest principles are called restful Apis.
+//It's just basically one is actually the standard. This set of rules and data.
+// One is actually the Apis built using these standards.
+@RestController //@Controller + @ResponseBody
+ */
+
 import com.cydeo.dto.CourseDTO;
 import com.cydeo.service.CourseService;
 import org.springframework.stereotype.Controller;

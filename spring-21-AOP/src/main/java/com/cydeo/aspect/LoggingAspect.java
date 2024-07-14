@@ -16,30 +16,30 @@ public class LoggingAspect {
 
     Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
 
-    // to print something in console
-//  1---
+  //   to print something in console
+ // 1---
 //    @Pointcut("execution(* com.cydeo.controller.CourseController.*(..))")
-//    public void myPointcut() {} whatever method in courseController before execution is printed Info log
+//    public void myPointcut() {} //whatever method in courseController before execution is printed Info log
 //
 //    @Before("myPointcut()")
 //    public void log() {
 //        logger.info("Info log..........");
 //    }
-//  2---
+ // 2---
 //    @Before("execution(* com.cydeo.controller.CourseController.*(..))")
 //    public void log() {
 //        logger.info("Info log..........");
 //    }
-//  3--
-//    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))")
-//    public void courseRepositoryFindByIdPC() {}
-//
-//    @Before("courseRepositoryFindByIdPC()")
-//    public void beforeCourseRepositoryFindById(JoinPoint joinPoint) {
-//        logger.info("Before -> Method: {}, Arguments: {}, Target: {}"
-//                , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
-//    }
-//    4--
+ // 3--
+    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))")
+    public void courseRepositoryFindByIdPC() {}
+
+    @Before("courseRepositoryFindByIdPC()")
+    public void beforeCourseRepositoryFindById(JoinPoint joinPoint) {
+        logger.info("Before -> Method: {}, Arguments: {}, Target: {}"
+                , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
+    }
+   // 4--
 //    @Pointcut("within(com.cydeo.controller..*)") // any method inside the controller
 //    public void anyControllerOperation() {}
 //
@@ -51,7 +51,7 @@ public class LoggingAspect {
 //        logger.info("Before -> Method: {}, Arguments: {}, Target: {}"
 //                , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
 //    }
-//  5--
+//  //5--
 //    @Pointcut("@annotation(org.springframework.web.bind.annotation.DeleteMapping)")
 //    public void anyDeleteControllerOperation() {
 //    }
@@ -61,19 +61,15 @@ public class LoggingAspect {
 //        logger.info("Before -> Method: {}, Arguments: {}, Target: {}"
 //                , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
 //    }
-//      6-- using own annotation --LoggingAnnotation
+//     // 6-- using own annotation --LoggingAnnotation
 //    @Pointcut("@annotation(com.cydeo.annotation.LoggingAnnotation)")
 //    public void loggingAnnotationPC() {} // PC means pointcut
 //
-//    @Before("loggingAnnotationPC()")
-//    public void beforeLoggingAnnotation(JoinPoint joinPoint) {
-//        logger.info("Before -> Method: {}, Arguments: {}, Target: {}"
-//                , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
-//    }
-//   7- after returning
+//
+//  // 7- after returning
 //    @Pointcut("@annotation(org.springframework.web.bind.annotation.GetMapping)")
 //    public void afterReturningGetMappingAnnotation() {}
-
+//
 //    @AfterReturning(pointcut = "afterReturningGetMappingAnnotation()", returning = "result")
 //    public void afterReturningGetMappingOperation(JoinPoint joinPoint, Object result) {
 //        logger.info("After Returning -> Method: {}, Result: {}", joinPoint.getSignature(), result.toString());
@@ -84,37 +80,37 @@ public class LoggingAspect {
 //        logger.info("After Returning -> Method: {}, Result: {}", joinPoint.getSignature(), results.toString());
 //    }
 //
-    // CourseDTO -> Object     --> This is ok
-    // List<CourseDTO> -> List<Object>     --> This is not ok
+//     CourseDTO -> Object     --> This is ok
+//     List<CourseDTO> -> List<Object>     --> This is not ok
 //
-    // 8 - AfterThrowing
+//    // 8 - AfterThrowing
 //    @AfterThrowing(pointcut = "afterReturningGetMappingAnnotation()", throwing = "exception")
 //    public void afterThrowingGetMappingOperation(JoinPoint joinPoint, RuntimeException exception) {
 //        logger.error("After Throwing -> Method: {}, Exception: {}"
 //                , joinPoint.getSignature().toShortString(), exception.getMessage());
 //    }
-// 9- Advice @Around
-    @Pointcut("@annotation(com.cydeo.annotation.LoggingAnnotation)")
-    public void loggingAnnotationPC() {}
-
-    @Around("loggingAnnotationPC()")
-    public Object anyLoggingAnnotationOperation(ProceedingJoinPoint proceedingJoinPoint) {
-
-        logger.info("Before -> Method: {} - Parameter {}"
-                , proceedingJoinPoint.getSignature().toShortString(), proceedingJoinPoint.getArgs());
-
-        Object result = null;
-// This is how we define which part is going to be before which part is going to be after
-        try {
-            result = proceedingJoinPoint.proceed();
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
-
-        logger.info("After -> Method: {} - Result: {}"
-                , proceedingJoinPoint.getSignature().toShortString(), result.toString());
-        return result;
- }
+// // 9- Advice @Around
+//    @Pointcut("@annotation(com.cydeo.annotation.LoggingAnnotation)")
+//    public void loggingAnnotationPC() {}
+//
+//    @Around("loggingAnnotationPC()")
+//    public Object anyLoggingAnnotationOperation(ProceedingJoinPoint proceedingJoinPoint) {
+//
+//        logger.info("Before -> Method: {} - Parameter {}"
+//                , proceedingJoinPoint.getSignature().toShortString(), proceedingJoinPoint.getArgs());
+//
+//        Object result = null;
+//        // This is how we define which part is going to be before which part is going to be after
+//        try {
+//            result = proceedingJoinPoint.proceed();
+//        } catch (Throwable throwable) {
+//            throwable.printStackTrace();
+//        }
+//
+//        logger.info("After -> Method: {} - Result: {}"
+//                , proceedingJoinPoint.getSignature().toShortString(), result.toString());
+//        return result;
+// }
 
 
     }
