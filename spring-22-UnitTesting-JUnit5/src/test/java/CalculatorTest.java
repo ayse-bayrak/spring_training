@@ -33,6 +33,11 @@ class CalculatorTest { // I can run all of them by using the run botton in the c
         int actual = Calculator.add(2, 3);
         assertEquals(5, actual, "Test failed"); // in JUnit5 expected first, actual second, for the others is different
     }
+/* behind the scene
+    new CalculatorTest().add();
+    new CalculatorTest().add2(); // static is only one assigned so it is like the similar logic
+    it is working like this
+    */
 
     @Test
     void add2() {
