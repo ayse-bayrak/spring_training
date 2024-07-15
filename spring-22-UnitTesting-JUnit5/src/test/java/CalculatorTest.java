@@ -28,6 +28,7 @@ class CalculatorTest { // I can run all of them by using the run botton in the c
 
 
     @Test
+    //@DisplayName("MyMethod") we can use this to change methodName but by default it is method name--> add()
     void add() {
         System.out.println("Add method");
         int actual = Calculator.add(2, 3);
