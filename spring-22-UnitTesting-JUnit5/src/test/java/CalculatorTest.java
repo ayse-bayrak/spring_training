@@ -94,4 +94,7 @@ class CalculatorTest { // I can run all of them by using the run botton in the c
         assertSame(c1,c2);
         assertNotSame(c1,c3);
     }
+
+    // maven-surefire-plugin
+    // if you have this, you can use terminal to run your test
 }
